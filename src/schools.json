@@ -1,0 +1,57 @@
+[
+    {
+        "id": "424242",
+        "name": "German College",
+        "description": "Lorem ipsum lorem ipsum",
+        "country": "Germany",
+        "city": "Berlin",
+        "languages": ["english", "spanish", "french"],
+        "imageUrl": "https://imgix.com/new-berlin-college",
+        "rating": 4.5,
+        "priceRating": 2
+    },
+    {
+        "id": "5435017",
+        "name": "New Berlin College",
+        "description": "Lorem ipsum lorem ipsum",
+        "country": "Germany",
+        "city": "Berlin",
+        "languages": ["english", "spanish", "french"],
+        "imageUrl": "https://imgix.com/new-berlin-college",
+        "rating": 4.5,
+        "priceRating": 2
+    },
+    {
+        "id": "45151435",
+        "name": "New Row College",
+        "description": "Lorem ipsum lorem ipsum",
+        "country": "Germany",
+        "city": "Berlin",
+        "languages": ["english", "spanish", "french"],
+        "imageUrl": "https://imgix.com/new-berlin-college",
+        "rating": 4.5,
+        "priceRating": 2
+    },
+    {
+        "id": "341241",
+        "name": "Contreau College",
+        "description": "Lorem ipsum lorem ipsum",
+        "country": "Germany",
+        "city": "Berlin",
+        "languages": ["english", "spanish", "french"],
+        "imageUrl": "https://imgix.com/new-berlin-college",
+        "rating": 4.5,
+        "priceRating": 2
+    },
+    {
+        "id": "89043141",
+        "name": "Old College",
+        "description": "Lorem ipsum lorem ipsum",
+        "country": "Germany",
+        "city": "Berlin",
+        "languages": ["english", "spanish", "french"],
+        "imageUrl": "https://imgix.com/new-berlin-college",
+        "rating": 4.5,
+        "priceRating": 2
+    }
+]
