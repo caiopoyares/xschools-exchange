@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Body";
+  src: local("SourceSans"),
+    url(../fonts/HindMadurai-Normal.woff) format("truetype");
+}
+
+@font-face {
+  font-family: "Display";
+  src: local("SourceSans Bold"),
+    url(../fonts/AmsiProNormal-Black.woff) format("truetype");
+}
+
+body {
+  font-family: "Body";
+}

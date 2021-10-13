@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Home } from "./pages/home";
-import Schools from "./pages/schoolList";
+import Schools from "./pages/schools";
 import SchoolDetails from "./pages/schoolDetails";
 
 export const Routes = () => {
