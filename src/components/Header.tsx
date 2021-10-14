@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { FaUserAlt } from "react-icons/fa";
+import { BsFillTriangleFill } from "react-icons/bs";
 
 const Wrapper = styled.div`
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
@@ -23,14 +24,22 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.div``;
+const Title = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 export const Header: React.FC<{}> = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Logo</Title>
-        <FaUserAlt color="#333" size={20} />
+        <Title>
+          <BsFillTriangleFill color="#FF385C" />
+          <text style={{ fontFamily: "Display", marginLeft: "5px" }}>
+            XSchools
+          </text>
+        </Title>
+        <FaUserAlt color="#333" />
       </Container>
     </Wrapper>
   );
