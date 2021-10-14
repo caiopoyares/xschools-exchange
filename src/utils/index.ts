@@ -1,6 +1,6 @@
 export const formatToStringList = (arr: string[]): string => {
   return arr.reduce((acc, cur) => {
-    cur = cur[0].toUpperCase() + cur.slice(1);
+    cur = capitalize(cur);
     return acc ? `${acc} · ${cur}` : cur;
   }, "");
 };
@@ -12,4 +12,8 @@ export const formatPriceRating = (priceRating: number): string => {
   }
 
   return str;
+};
+
+export const capitalize = (str: string): string => {
+  return str[0].toUpperCase() + str.slice(1);
 };

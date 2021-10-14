@@ -8,13 +8,27 @@ interface Props {
 }
 
 const List = styled.div`
-  margin-top: 20px;
+  @media (min-width: 800px) {
+    margin: 10px;
+  }
 `;
 
 const ListTitle = styled.h1`
   font-family: Display;
   font-size: 1.5rem;
   margin-left: 10px;
+`;
+
+const Divider = styled.div`
+  display: flex;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  order: 1;
+
+  @media (min-width: 800px) {
+    display: none;
+  }
 `;
 
 export const SchoolList: React.FC<Props> = ({ schools }) => {
@@ -25,7 +39,10 @@ export const SchoolList: React.FC<Props> = ({ schools }) => {
       </ListTitle>
       <List>
         {schools.map((school) => (
-          <SchoolItem key={school.id} school={school} />
+          <>
+            <SchoolItem key={school.id} school={school} />
+            <Divider />
+          </>
         ))}
       </List>
     </div>

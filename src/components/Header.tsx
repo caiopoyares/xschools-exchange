@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Link } from "react-router-dom";
+
 import { FaUserAlt } from "react-icons/fa";
 import { BsFillTriangleFill } from "react-icons/bs";
 
@@ -29,15 +31,20 @@ const Title = styled.div`
   align-items: center;
 `;
 
+const Logo = styled(Link)`
+  font-family: Display;
+  margin-left: 5px;
+  text-decoration: none;
+  color: #333;
+`;
+
 export const Header: React.FC<{}> = () => {
   return (
     <Wrapper>
       <Container>
         <Title>
           <BsFillTriangleFill color="#FF385C" />
-          <text style={{ fontFamily: "Display", marginLeft: "5px" }}>
-            XSchools
-          </text>
+          <Logo to="/">XSchools</Logo>
         </Title>
         <FaUserAlt color="#333" />
       </Container>
