@@ -8,7 +8,8 @@
         "languages": ["english", "spanish", "french"],
         "imageUrl": "https://picsum.photos/200/300?grayscale",
         "rating": 4.5,
-        "priceRating": 2
+        "priceRating": 2,
+        "price": 2000
     },
     {
         "id": "5435017",
@@ -19,7 +20,8 @@
         "languages": ["english", "spanish", "french"],
         "imageUrl": "https://picsum.photos/200/300?grayscale",
         "rating": 4.5,
-        "priceRating": 2
+        "priceRating": 2,
+        "price": 2000
     },
     {
         "id": "45151435",
@@ -30,7 +32,8 @@
         "languages": ["english", "spanish", "french"],
         "imageUrl": "https://picsum.photos/200/300?grayscale",
         "rating": 4.5,
-        "priceRating": 2
+        "priceRating": 2,
+        "price": 2000
     },
     {
         "id": "341241",
@@ -41,7 +44,8 @@
         "languages": ["english", "spanish", "french"],
         "imageUrl": "https://picsum.photos/200/300?grayscale",
         "rating": 4.5,
-        "priceRating": 2
+        "priceRating": 2,
+        "price": 2000
     },
     {
         "id": "89043141",
@@ -52,6 +56,7 @@
         "languages": ["english", "spanish", "french"],
         "imageUrl": "https://picsum.photos/200/300?grayscale",
         "rating": 4.5,
-        "priceRating": 2
+        "priceRating": 2,
+        "price": 2000
     }
 ]

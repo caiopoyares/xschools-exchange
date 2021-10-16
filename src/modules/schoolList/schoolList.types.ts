@@ -8,4 +8,5 @@ export interface School {
   imageUrl: string;
   rating: number;
   priceRating: number;
+  price: number;
 }

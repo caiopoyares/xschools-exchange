@@ -28,7 +28,7 @@ const Box = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  max-height: 400px;
+  height: 200px;
   margin-bottom: 1rem;
   object-fit: cover;
 
@@ -49,15 +49,47 @@ const Description = styled.div`
   font-size: 0.8rem;
   margin-top: 3px;
   color: #999;
-  order: 1;
 `;
 
 const Flex = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   @media (min-width: 800px) {
     flex-direction: row;
+  }
+`;
+
+const PriceTag = styled.div`
+  margin-left: auto;
+  font-family: "display";
+  font-size: 1.2rem;
+
+  @media (min-width: 800px) {
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: auto;
+  }
+`;
+
+const Details = styled.div`
+  display: flex;
+  flex: 1;
+  margin-right: 20px;
+
+  @media (min-width: 800px) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;
+  }
+`;
+
+const RatingBox = styled.div`
+  display: flex;
+  margin-bottom: 10px;
+  @media (min-width: 800px) {
+    margin-top: 10px;
   }
 `;
 
@@ -70,16 +102,23 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
   return (
     <Box onClick={redirectToSchoolDetails}>
       <Flex>
-        <Image src="https://picsum.photos/800/400" alt={school.name} />
+        <div style={{ minWidth: 300 }}>
+          <Image src="https://picsum.photos/800/400" alt={school.name} />
+        </div>
         <div
           style={{
-            flex: 1,
-            marginLeft: "10px",
             display: "flex",
             flexDirection: "column",
+            width: "100%",
+            height: "100%",
+            marginLeft: "20px",
           }}
         >
-          <div style={{ display: "flex", order: 1 }}>
+          <RatingBox>
+            <FaStar color="#FF385C" />
+            <div style={{ marginLeft: "3px" }}>{school.rating}</div>
+          </RatingBox>
+          <div style={{ display: "flex" }}>
             <div>
               <div
                 style={{
@@ -93,11 +132,6 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
 
               <Title>{school.name}</Title>
             </div>
-            <div style={{ marginLeft: "auto", marginRight: "15px" }}>
-              <div style={{ color: "#AAA", letterSpacing: "1px" }}>
-                {formatPriceRating(school.priceRating)}
-              </div>
-            </div>
           </div>
           <Description>{school.description}</Description>
           <div
@@ -106,16 +140,32 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
               borderTop: "1px solid #DDD",
               marginTop: "10px",
               marginBottom: "10px",
-              order: 1,
             }}
           ></div>
-          <div style={{ fontSize: "0.9rem", color: "#999", order: 1 }}>
-            {formattedLanguages}
-          </div>
-          <div style={{ display: "flex", marginBottom: "10px", order: 0 }}>
-            <FaStar color="#FF385C" />
-            <div style={{ marginLeft: "3px" }}>{school.rating}</div>
-          </div>
+          <Details>
+            <div style={{ flex: 1, fontSize: "0.9rem", color: "#999" }}>
+              {formattedLanguages}
+            </div>
+            <div
+              style={{
+                marginLeft: "auto",
+                marginRight: "20px",
+                marginTop: "auto",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  color: "#AAA",
+                  letterSpacing: "1px",
+                }}
+              >
+                {formatPriceRating(school.priceRating)}
+              </div>
+              <PriceTag>${school.price}</PriceTag>
+            </div>
+          </Details>
         </div>
       </Flex>
     </Box>

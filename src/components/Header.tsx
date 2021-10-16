@@ -7,9 +7,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { BsFillTriangleFill } from "react-icons/bs";
 
 const Wrapper = styled.div`
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
   height: 55px;
-  margin-bottom: 8px;
 `;
 
 const Container = styled.div`
