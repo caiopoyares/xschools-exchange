@@ -46,5 +46,6 @@
 	"totalPrice": 12000,
 	"monthlyPrice": 1000,
 	"acceptInstallments": true,
-	"maxInstallments": 8
+	"maxInstallments": 8,
+	"favorite": true
 }

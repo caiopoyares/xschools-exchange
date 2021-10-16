@@ -3,8 +3,11 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { withLayout } from "../components/withLayout";
 import details from "./../schoolDetails.json";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaRegHeart } from "react-icons/fa";
 import { capitalize, formatToStringList } from "../utils";
+import { useQuery } from "react-query";
+import Spinner from "../components/Spinner";
+import schools from "../schools.json";
 
 interface Params {
   id: string;
@@ -14,6 +17,7 @@ const Wrapper = styled.div`
   width: 100%;
   background-color: #f7f7f7;
   padding-bottom: 2rem;
+  min-height: 100vh;
   @media (min-width: 800px) {
     padding-top: 2rem;
   }
@@ -65,6 +69,18 @@ const SchoolDetails: React.FC = () => {
   const schoolDetails = details;
   const formattedLanguages = formatToStringList(schoolDetails.languages);
 
+  const school = schools.find((school) => school.id === id);
+
+  // const { isLoading, error, data } = useQuery("schoolDetails", () =>
+  //   fetch(`${process.env.REACT_APP_API_URL}/schools/${id}`).then((res) =>
+  //     res.json()
+  //   )
+  // );
+
+  // if (isLoading) return <Spinner />;
+
+  // if (error) return <div>An error has occured.</div>;
+
   return (
     <Wrapper>
       <Container>
@@ -90,6 +106,12 @@ const SchoolDetails: React.FC = () => {
             }}
           >
             {schoolDetails.city}, {schoolDetails.country}
+          </div>
+          <div style={{ marginLeft: "auto", marginRight: "20px" }}>
+            <FaRegHeart
+              size="1.2rem"
+              fill={schoolDetails.favorite ? "#FF385C" : "#000"}
+            />
           </div>
         </div>
         <ImageBox>

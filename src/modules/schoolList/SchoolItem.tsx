@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
 import { School } from "./schoolList.types";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaRegHeart } from "react-icons/fa";
 import { formatPriceRating, formatToStringList } from "../../utils";
 
 interface Props {
@@ -76,7 +76,6 @@ const PriceTag = styled.div`
 const Details = styled.div`
   display: flex;
   flex: 1;
-  margin-right: 20px;
 
   @media (min-width: 800px) {
     flex-direction: column;
@@ -103,36 +102,48 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
     <Box onClick={redirectToSchoolDetails}>
       <Flex>
         <div style={{ minWidth: 300 }}>
-          <Image src="https://picsum.photos/800/400" alt={school.name} />
+          <Image src={school.imageUrl} alt={school.name} />
         </div>
         <div
           style={{
             display: "flex",
             flexDirection: "column",
-            width: "100%",
+            flex: 1,
             height: "100%",
             marginLeft: "20px",
+            marginRight: "15px",
           }}
         >
-          <RatingBox>
-            <FaStar color="#FF385C" />
-            <div style={{ marginLeft: "3px" }}>{school.rating}</div>
-          </RatingBox>
           <div style={{ display: "flex" }}>
             <div>
-              <div
-                style={{
-                  color: "#FF385C",
-                  fontSize: "0.8rem",
-                  marginBottom: "3px",
-                }}
-              >
-                {school.city} · {school.country}
-              </div>
+              <RatingBox>
+                <FaStar color="#FF385C" />
+                <div style={{ marginLeft: "3px" }}>{school.rating}</div>
+              </RatingBox>
+              <div style={{ display: "flex" }}>
+                <div>
+                  <div
+                    style={{
+                      color: "#FF385C",
+                      fontSize: "0.8rem",
+                      marginBottom: "3px",
+                    }}
+                  >
+                    {school.city} · {school.country}
+                  </div>
 
-              <Title>{school.name}</Title>
+                  <Title>{school.name}</Title>
+                </div>
+              </div>
+            </div>
+            <div style={{ marginLeft: "auto" }}>
+              <FaRegHeart
+                size="1.2rem"
+                fill={school.favorite ? "#FF385C" : "#000"}
+              />
             </div>
           </div>
+
           <Description>{school.description}</Description>
           <div
             style={{
@@ -149,7 +160,6 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
             <div
               style={{
                 marginLeft: "auto",
-                marginRight: "20px",
                 marginTop: "auto",
               }}
             >

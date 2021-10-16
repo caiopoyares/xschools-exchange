@@ -11,7 +11,9 @@ const Wrapper = styled.div`
   width: 100%;
   background-color: #f7f7f7;
   @media (min-width: 800px) {
+    min-height: 100vh;
     padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 `;
 
@@ -20,6 +22,7 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
+  padding-bottom: 20px;
 
   background-color: #fff;
 

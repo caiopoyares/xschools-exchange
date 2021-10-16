@@ -1,62 +1,67 @@
 [
     {
-        "id": "424242",
+        "id": "193",
+        "name": "Old College",
+        "description": "Lorem ipsum lorem ipsum",
+        "country": "Germany",
+        "city": "Berlin",
+        "languages": ["english", "spanish"],
+        "imageUrl": "https://picsum.photos/id/193/800/400",
+        "rating": 4.5,
+        "priceRating": 2,
+        "price": 2000,
+        "favorite": false
+    },
+    {
+        "id": "622",
         "name": "German College",
         "description": "Lorem ipsum lorem ipsum",
         "country": "Germany",
         "city": "Berlin",
         "languages": ["english", "spanish", "french"],
-        "imageUrl": "https://picsum.photos/200/300?grayscale",
+        "imageUrl": "https://picsum.photos/id/622/800/400",
         "rating": 4.5,
         "priceRating": 2,
-        "price": 2000
+        "price": 2000,
+        "favorite": false
     },
     {
-        "id": "5435017",
+        "id": "441",
         "name": "New Berlin College",
         "description": "Lorem ipsum lorem ipsum",
         "country": "Germany",
         "city": "Berlin",
         "languages": ["english", "spanish", "french"],
-        "imageUrl": "https://picsum.photos/200/300?grayscale",
+        "imageUrl": "https://picsum.photos/id/441/800/400",
         "rating": 4.5,
         "priceRating": 2,
-        "price": 2000
+        "price": 2000,
+        "favorite": false
     },
     {
-        "id": "45151435",
+        "id": "369",
         "name": "New Row College",
         "description": "Lorem ipsum lorem ipsum",
         "country": "Germany",
         "city": "Berlin",
         "languages": ["english", "spanish", "french"],
-        "imageUrl": "https://picsum.photos/200/300?grayscale",
+        "imageUrl": "https://picsum.photos/id/369/800/400",
         "rating": 4.5,
         "priceRating": 2,
-        "price": 2000
+        "price": 2000,
+        "favorite": false
     },
     {
-        "id": "341241",
+        "id": "88",
         "name": "Contreau College",
         "description": "Lorem ipsum lorem ipsum",
         "country": "Germany",
         "city": "Berlin",
         "languages": ["english", "spanish", "french"],
-        "imageUrl": "https://picsum.photos/200/300?grayscale",
+        "imageUrl": "https://picsum.photos/id/88/800/400",
         "rating": 4.5,
         "priceRating": 2,
-        "price": 2000
-    },
-    {
-        "id": "89043141",
-        "name": "Old College",
-        "description": "Lorem ipsum lorem ipsum",
-        "country": "Germany",
-        "city": "Berlin",
-        "languages": ["english", "spanish", "french"],
-        "imageUrl": "https://picsum.photos/200/300?grayscale",
-        "rating": 4.5,
-        "priceRating": 2,
-        "price": 2000
+        "price": 2000,
+        "favorite": true
     }
 ]

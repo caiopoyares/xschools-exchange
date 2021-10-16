@@ -9,4 +9,5 @@ export interface School {
   rating: number;
   priceRating: number;
   price: number;
+  favorite: boolean;
 }
