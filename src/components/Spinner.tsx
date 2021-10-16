@@ -1,5 +1,6 @@
 import Loader from "react-loader-spinner";
 import styled from "styled-components";
+import colors from "../constants/colors";
 
 const Center = styled.div`
   position: absolute;
@@ -9,7 +10,7 @@ const Center = styled.div`
 
 const Spinner = () => (
   <Center>
-    <Loader type="TailSpin" color="#000" height={30} width={30} />
+    <Loader type="TailSpin" color={colors.black} height={30} width={30} />
   </Center>
 );
 

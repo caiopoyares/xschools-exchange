@@ -1,4 +1,58 @@
+[
+	{
+	"id": 193,
+	"name": "Old College",
+	"description": "Lorem ipsum lorem ipsum",
+	"phone": {
+		"code": "+32",
+		"number": "987654332"
+	},
+	"email": "support@berlin.college.com",
+	"country": "Germany",
+	"city": "Frankfurt",
+	"schedule": {
+		"start": {
+			"year": 2022,
+			"month": 2
+		},
+		"end": {
+			"year": 2023,
+			"month": 11
+		}
+	},
+	"languages": [
+		"english",
+		"spanish",
+		"french"
+	],
+	"images": [
+		"https://imgix.com/new-berlin-college-1",
+		"https://imgix.com/new-berlin-college-2",
+		"https://imgix.com/new-berlin-college-3",
+		"https://imgix.com/new-berlin-college-4",
+		"https://imgix.com/new-berlin-college-5"
+	],
+	"features": [
+		"best 50 schools in europe award 2021",
+		"wi-fi covering all campus",
+		"private classes once a week",
+		"classes with 15 students max",
+		"2 teachers per class"
+	],
+	"ratings": {
+		"total": 4.9,
+		"campus": 5.0,
+		"teachers": 3.5,
+		"sports": 4
+	},
+	"totalPrice": 4700,
+	"monthlyPrice": 1000,
+	"acceptInstallments": false,
+	"maxInstallments": 8,
+	"favorite": false
+},
 {
+	"id": 622, 
 	"name": "New Berlin College",
 	"description": "lorem ipsum loga fad fafklda lorem ipsum loga fad fafklda lorem ipsum loga fad fafklda lorem ipsum loga fad fafklda lorem ipsum loga fad fafklda lorem ipsum loga fad fafklda",
 	"phone": {
@@ -38,14 +92,171 @@
 		"2 teachers per class"
 	],
 	"ratings": {
-		"total": 4.5,
+		"total": 4.3,
 		"campus": 5.0,
 		"teachers": 3.5,
 		"sports": 4
 	},
-	"totalPrice": 12000,
+	"totalPrice": 4000,
 	"monthlyPrice": 1000,
-	"acceptInstallments": true,
+	"acceptInstallments": false,
+	"maxInstallments": 8,
+	"favorite": false
+},
+{
+	"id": 441,
+	"name": "New Berlin College",
+	"description": "Lorem ipsum lorem ipsum",
+	"phone": {
+		"code": "+32",
+		"number": "987654332"
+	},
+	"email": "support@berlin.college.com",
+	"country": "Germany",
+	"city": "Munich",
+	"schedule": {
+		"start": {
+			"year": 2022,
+			"month": 2
+		},
+		"end": {
+			"year": 2023,
+			"month": 11
+		}
+	},
+	"languages": [
+		"english",
+		"spanish",
+		"french"
+	],
+	"images": [
+		"https://imgix.com/new-berlin-college-1",
+		"https://imgix.com/new-berlin-college-2",
+		"https://imgix.com/new-berlin-college-3",
+		"https://imgix.com/new-berlin-college-4",
+		"https://imgix.com/new-berlin-college-5"
+	],
+	"features": [
+		"best 50 schools in europe award 2021",
+		"wi-fi covering all campus",
+		"private classes once a week",
+		"classes with 15 students max",
+		"2 teachers per class"
+	],
+	"ratings": {
+		"total": 4.2,
+		"campus": 5.0,
+		"teachers": 3.5,
+		"sports": 4
+	},
+	"totalPrice": 3600,
+	"monthlyPrice": 1000,
+	"acceptInstallments": false,
+	"maxInstallments": 8,
+	"favorite": false
+},
+{
+	"id": 369,
+	"name": "New Row College",
+	"description": "Lorem ipsum lorem ipsum",
+	"phone": {
+		"code": "+32",
+		"number": "987654332"
+	},
+	"email": "support@berlin.college.com",
+	"country": "Germany",
+	"city": "Berlin",
+	"schedule": {
+		"start": {
+			"year": 2022,
+			"month": 2
+		},
+		"end": {
+			"year": 2023,
+			"month": 11
+		}
+	},
+	"languages": [
+		"english",
+		"spanish",
+		"french"
+	],
+	"images": [
+		"https://imgix.com/new-berlin-college-1",
+		"https://imgix.com/new-berlin-college-2",
+		"https://imgix.com/new-berlin-college-3",
+		"https://imgix.com/new-berlin-college-4",
+		"https://imgix.com/new-berlin-college-5"
+	],
+	"features": [
+		"best 50 schools in europe award 2021",
+		"wi-fi covering all campus",
+		"private classes once a week",
+		"classes with 15 students max",
+		"2 teachers per class"
+	],
+	"ratings": {
+		"total": 3.9,
+		"campus": 5.0,
+		"teachers": 3.5,
+		"sports": 4
+	},
+	"totalPrice": 1700,
+	"monthlyPrice": 1000,
+	"acceptInstallments": false,
+	"maxInstallments": 8,
+	"favorite": false
+},
+{
+	"id": 88,
+	"name": "Contreau College",
+	"description": "Lorem ipsum lorem ipsum",
+	"phone": {
+		"code": "+32",
+		"number": "987654332"
+	},
+	"email": "support@berlin.college.com",
+	"country": "Germany",
+	"city": "Berlin",
+	"schedule": {
+		"start": {
+			"year": 2022,
+			"month": 2
+		},
+		"end": {
+			"year": 2023,
+			"month": 11
+		}
+	},
+	"languages": [
+		"english",
+		"spanish",
+		"french"
+	],
+	"images": [
+		"https://imgix.com/new-berlin-college-1",
+		"https://imgix.com/new-berlin-college-2",
+		"https://imgix.com/new-berlin-college-3",
+		"https://imgix.com/new-berlin-college-4",
+		"https://imgix.com/new-berlin-college-5"
+	],
+	"features": [
+		"best 50 schools in europe award 2021",
+		"wi-fi covering all campus",
+		"private classes once a week",
+		"classes with 15 students max",
+		"2 teachers per class"
+	],
+	"ratings": {
+		"total": 4.3,
+		"campus": 5.0,
+		"teachers": 3.5,
+		"sports": 4
+	},
+	"totalPrice": 2500,
+	"monthlyPrice": 1000,
+	"acceptInstallments": false,
 	"maxInstallments": 8,
 	"favorite": true
 }
+]

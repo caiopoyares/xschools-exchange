@@ -1,100 +1,32 @@
 import React from "react";
-import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 
+import {
+  Box,
+  Flex,
+  Image,
+  SchoolInfo,
+  RatingBox,
+  Title,
+  Description,
+  Details,
+  PriceTag,
+} from "./SchoolItem.styles";
 import { School } from "./schoolList.types";
 import { FaStar, FaRegHeart } from "react-icons/fa";
 import { formatPriceRating, formatToStringList } from "../../utils";
+import colors from "../../constants/colors";
 
 interface Props {
   school: School;
 }
 
-const Box = styled.div`
-  max-width: 800px;
-  display: flex;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  cursor: pointer;
-
-  @media (min-width: 800px) {
-    width: 650px;
-    margin-bottom: 20px;
-    padding-left: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: 200px;
-  margin-bottom: 1rem;
-  object-fit: cover;
-
-  @media (min-width: 800px) {
-    max-width: 300px;
-    height: 200px;
-    border-radius: 8px;
-    margin-bottom: 0;
-  }
-`;
-
-const Title = styled.div`
-  font-size: 1rem;
-  margin-bottom: 3px;
-`;
-
-const Description = styled.div`
-  font-size: 0.8rem;
-  margin-top: 3px;
-  color: #999;
-`;
-
-const Flex = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  @media (min-width: 800px) {
-    flex-direction: row;
-  }
-`;
-
-const PriceTag = styled.div`
-  margin-left: auto;
-  font-family: "display";
-  font-size: 1.2rem;
-
-  @media (min-width: 800px) {
-    margin-right: auto;
-    margin-left: 0;
-    margin-top: auto;
-  }
-`;
-
-const Details = styled.div`
-  display: flex;
-  flex: 1;
-
-  @media (min-width: 800px) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 0;
-  }
-`;
-
-const RatingBox = styled.div`
-  display: flex;
-  margin-bottom: 10px;
-  @media (min-width: 800px) {
-    margin-top: 10px;
-  }
-`;
-
 export const SchoolItem: React.FC<Props> = ({ school }) => {
   const history = useHistory();
   const formattedLanguages = formatToStringList(school.languages);
+  const [isFavorite, setIsFavorite] = React.useState(false);
+
+  const toggleFavorite = () => setIsFavorite(!isFavorite);
 
   const redirectToSchoolDetails = () => history.push(`/schools/${school.id}`);
 
@@ -104,27 +36,18 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
         <div style={{ minWidth: 300 }}>
           <Image src={school.imageUrl} alt={school.name} />
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flex: 1,
-            height: "100%",
-            marginLeft: "20px",
-            marginRight: "15px",
-          }}
-        >
+        <SchoolInfo>
           <div style={{ display: "flex" }}>
             <div>
               <RatingBox>
-                <FaStar color="#FF385C" />
+                <FaStar color={colors.primary} />
                 <div style={{ marginLeft: "3px" }}>{school.rating}</div>
               </RatingBox>
               <div style={{ display: "flex" }}>
                 <div>
                   <div
                     style={{
-                      color: "#FF385C",
+                      color: colors.primary,
                       fontSize: "0.8rem",
                       marginBottom: "3px",
                     }}
@@ -136,10 +59,10 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
                 </div>
               </div>
             </div>
-            <div style={{ marginLeft: "auto" }}>
+            <div style={{ marginLeft: "auto" }} onClick={toggleFavorite}>
               <FaRegHeart
                 size="1.2rem"
-                fill={school.favorite ? "#FF385C" : "#000"}
+                fill={isFavorite ? colors.primary : colors.black}
               />
             </div>
           </div>
@@ -176,7 +99,7 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
               <PriceTag>${school.price}</PriceTag>
             </div>
           </Details>
-        </div>
+        </SchoolInfo>
       </Flex>
     </Box>
   );

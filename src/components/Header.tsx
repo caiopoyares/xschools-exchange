@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 import { FaUserAlt } from "react-icons/fa";
 import { BsFillTriangleFill } from "react-icons/bs";
+import colors from "../constants/colors";
 
 const Wrapper = styled.div`
   height: 55px;
@@ -41,10 +42,10 @@ export const Header: React.FC<{}> = () => {
     <Wrapper>
       <Container>
         <Title>
-          <BsFillTriangleFill color="#FF385C" />
+          <BsFillTriangleFill color={colors.primary} />
           <Logo to="/">XSchools</Logo>
         </Title>
-        <FaUserAlt color="#333" />
+        <FaUserAlt color={colors.gray} />
       </Container>
     </Wrapper>
   );
