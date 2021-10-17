@@ -3,8 +3,10 @@
         "id": 193,
         "name": "Old College",
         "description": "Lorem ipsum lorem ipsum",
-        "country": "Germany",
-        "city": "Berlin",
+        "location": {
+            "country": "Germany",
+            "city": "Berlin"
+        },
         "languages": ["german","english", "spanish"],
         "imageUrl": "https://picsum.photos/id/193/800/400",
         "rating": 4.9,
@@ -16,8 +18,10 @@
         "id": 622,
         "name": "German College",
         "description": "Lorem ipsum lorem ipsum",
-        "country": "Germany",
-        "city": "Berlin",
+        "location": {
+            "country": "Germany",
+            "city": "Berlin"
+        },
         "languages": ["spanish", "german"],
         "imageUrl": "https://picsum.photos/id/622/800/400",
         "rating": 4.3,
@@ -29,8 +33,10 @@
         "id": 441,
         "name": "New Berlin College",
         "description": "Lorem ipsum lorem ipsum",
-        "country": "Germany",
-        "city": "Berlin",
+        "location": {
+            "country": "Germany",
+            "city": "Berlin"
+        },
         "languages": ["german", "english", "portuguese"],
         "imageUrl": "https://picsum.photos/id/441/800/400",
         "rating": 4.2,
@@ -42,8 +48,10 @@
         "id": 369,
         "name": "New Row College",
         "description": "Lorem ipsum lorem ipsum",
-        "country": "Germany",
-        "city": "Berlin",
+        "location": {
+            "country": "Germany",
+            "city": "Berlin"
+        },
         "languages": ["english", "french"],
         "imageUrl": "https://picsum.photos/id/369/800/400",
         "rating": 3.9,
@@ -55,8 +63,10 @@
         "id": 88,
         "name": "Contreau College",
         "description": "Lorem ipsum lorem ipsum",
-        "country": "Germany",
-        "city": "Berlin",
+        "location": {
+            "country": "Germany",
+            "city": "Berlin"
+        },
         "languages": ["french", "spanish", "english"],
         "imageUrl": "https://picsum.photos/id/88/800/400",
         "rating": 4.3,

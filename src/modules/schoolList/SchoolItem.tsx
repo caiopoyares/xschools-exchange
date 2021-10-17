@@ -52,7 +52,7 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
                       marginBottom: "3px",
                     }}
                   >
-                    {school.city} · {school.country}
+                    {school.location.city} · {school.location.country}
                   </div>
 
                   <Title>{school.name}</Title>
@@ -79,24 +79,6 @@ export const SchoolItem: React.FC<Props> = ({ school }) => {
           <Details>
             <div style={{ flex: 1, fontSize: "0.9rem", color: "#999" }}>
               {formattedLanguages}
-            </div>
-            <div
-              style={{
-                marginLeft: "auto",
-                marginTop: "auto",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-end",
-                  color: "#AAA",
-                  letterSpacing: "1px",
-                }}
-              >
-                {formatPriceRating(school.priceRating)}
-              </div>
-              <PriceTag>${school.price}</PriceTag>
             </div>
           </Details>
         </SchoolInfo>

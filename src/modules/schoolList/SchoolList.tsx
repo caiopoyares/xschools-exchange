@@ -58,13 +58,12 @@ const Divider = styled.div`
   }
 `;
 
-export const SchoolList: React.FC<Props> = ({ schools }) => {
+export const SchoolList: React.FC<Props> = ({ schools = [] }) => {
+  console.log(schools);
   return (
     <Wrapper>
       <Container>
-        <ListTitle>
-          Schools at {schools[0].city}, {schools[0].country}
-        </ListTitle>
+        <ListTitle>All schools</ListTitle>
         <List>
           {schools.map((school) => (
             <>

@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { withLayout } from "../components/withLayout";
-import schoolsDetails from "../schoolDetails.json";
 import { SchoolCard } from "../modules/SchoolCard/SchoolCard";
+import { SchoolDetails as schoolDetails } from "../modules/SchoolCard/schoolCard.types";
+import axios from "axios";
+import { useQuery } from "react-query";
+import Spinner from "../components/Spinner";
 
 interface Params {
   id: string;
@@ -19,14 +22,27 @@ const Wrapper = styled.div`
   }
 `;
 
+const Center = styled.div`
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 const SchoolDetails: React.FC = () => {
   const { id } = useParams<Params>();
 
-  const school = schoolsDetails.find((school) => school.id === parseInt(id))!;
+  const { data, error, isLoading } = useQuery("schoolsDetails", () =>
+    axios.get(`/schools/${id}`)
+  );
+
+  if (isLoading) return <Spinner />;
+
+  if (error) return <Center>Sorry, something went wrong :(</Center>;
 
   return (
     <Wrapper>
-      <SchoolCard school={school} />
+      <SchoolCard school={data?.data as schoolDetails} />
     </Wrapper>
   );
 };

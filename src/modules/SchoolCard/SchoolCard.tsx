@@ -35,7 +35,7 @@ const SchoolCard: React.FC<Props> = ({ school }) => {
       >
         <FaStar color={colors.primary} />
         <div style={{ marginLeft: "5px", fontSize: "0.9rem" }}>
-          {school.ratings.total}
+          {school.rating?.total}
         </div>
         <div
           style={{
@@ -44,7 +44,8 @@ const SchoolCard: React.FC<Props> = ({ school }) => {
             marginLeft: "10px",
           }}
         >
-          {school.city}, {school.country}
+          {capitalize(school.location?.city)},{" "}
+          {capitalize(school.location?.country)}
         </div>
         <div
           style={{ marginLeft: "auto", marginRight: "20px", cursor: "pointer" }}
@@ -57,10 +58,7 @@ const SchoolCard: React.FC<Props> = ({ school }) => {
         </div>
       </div>
       <ImageBox>
-        <Image
-          src={`https://picsum.photos/id/${school.id}/800/400`}
-          alt={school.name}
-        />
+        {school.images && <Image src={school.images[0]} alt={school.name} />}
       </ImageBox>
       <div
         style={{
@@ -94,8 +92,7 @@ const SchoolCard: React.FC<Props> = ({ school }) => {
                 textTransform: "uppercase",
               }}
             >
-              Starts at {school.schedule.start.month}/
-              {school.schedule.start.year}
+              Starts at {school.courses[0].schedule.start}
             </text>
           </div>
           <text
@@ -106,7 +103,7 @@ const SchoolCard: React.FC<Props> = ({ school }) => {
               textTransform: "uppercase",
             }}
           >
-            Ends at {school.schedule.end.month}/{school.schedule.end.year}
+            Ends at {school.courses[0].schedule.end}
           </text>
           <div style={{ marginTop: "1rem", color: colors.gray }}>
             {school.description}
@@ -136,7 +133,7 @@ const SchoolCard: React.FC<Props> = ({ school }) => {
                 ))}
               </div>
             </div>
-            <PriceTag>${school.totalPrice}</PriceTag>
+            <PriceTag>${school.courses[0].price}</PriceTag>
           </div>
         </div>
       </div>

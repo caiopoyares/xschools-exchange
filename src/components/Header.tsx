@@ -43,7 +43,7 @@ export const Header: React.FC<{}> = () => {
       <Container>
         <Title>
           <BsFillTriangleFill color={colors.primary} />
-          <Logo to="/">XSchools</Logo>
+          <Logo to="/schools">XSchools</Logo>
         </Title>
         <FaUserAlt color={colors.gray} />
       </Container>

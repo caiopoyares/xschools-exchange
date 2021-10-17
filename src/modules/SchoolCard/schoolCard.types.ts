@@ -6,26 +6,27 @@ export interface SchoolDetails {
     code: string;
     number: string;
   };
-  email: string;
-  country: string;
-  city: string;
-  schedule: {
-    start: {
-      year: number;
-      month: number;
-    };
-    end: {
-      year: number;
-      month: number;
-    };
+  location: {
+    country: string;
+    city: string;
   };
+  email: string;
+  courses: Course[];
   languages: string[];
   images: string[];
   features: string[];
-  ratings: Record<string, number>;
-  totalPrice: number;
-  monthlyPrice: number;
-  acceptInstallments: boolean;
-  maxInstallments: number;
-  favorite: boolean;
+  rating: Record<string, number>;
+}
+
+interface Course {
+  id: number;
+  name: string;
+  description: string;
+  language: string;
+  schedule: {
+    start: string;
+    end: string;
+  };
+  price: number;
+  paymentOptions: any;
 }
