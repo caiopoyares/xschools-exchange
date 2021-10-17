@@ -47,7 +47,7 @@ const SchoolCard: React.FC<Props> = ({ school }) => {
           {school.city}, {school.country}
         </div>
         <div
-          style={{ marginLeft: "auto", marginRight: "20px" }}
+          style={{ marginLeft: "auto", marginRight: "20px", cursor: "pointer" }}
           onClick={toggleFavorite}
         >
           <FaRegHeart
