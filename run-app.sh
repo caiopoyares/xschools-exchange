@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $1 == "--dev" ]; then
+if [ !$1 ]; then
     docker-compose down
     docker-compose up -d --build
 fi
